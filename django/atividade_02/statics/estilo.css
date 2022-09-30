@@ -1,0 +1,22 @@
+body
+{
+    background-color: aqua;
+}
+
+p
+{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cor
+{
+    color: red
+}
+
+
+
+/*Cor de fundo da página;
+Alinhamento e fonte dos parágrafos;
+Uma classe que irá alterar apenas um parágrafo da página (você escolhe as propriedades);
+*/
