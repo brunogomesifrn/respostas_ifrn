@@ -15,22 +15,21 @@ numero_b = int(input("Digite o segundo número"))
 if numero_a<numero_b:
     for num in range(numero_a+1, numero_b):
         print(num)
-elif numero_a>numero_b:
-    for num in range(numero_b-1, numero_a+1, -1):
+
+if numero_a>numero_b:
+    for num in range(numero_a-1, numero_b, -1):
         print(num)
-else:
+    
+if numero_a==numero_b:
     print("Os números digitados são iguais")
 
 
-    
 #Solução 2
 if numero_a<numero_b:
     for num in range(numero_a+1, numero_b):
         print(num)
-
-if numero_a>numero_b:
-    for num in range(numero_b-1, numero_a+1, -1):
+elif numero_a>numero_b:
+    for num in range(numero_a-1, numero_b, -1):
         print(num)
-
-if numero_a==numero_b:
+else:
     print("Os números digitados são iguais")
