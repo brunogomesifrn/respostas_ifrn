@@ -31,3 +31,7 @@ print(numeros[0],'\n',numeros[1],'\n',numeros[2],'\n',numeros[3],'\n',numeros[4]
 for num in numeros:
     print(num)
 
+#SOLUÇÃO 4 para impressão dos dados
+tamanho = len(numeros)
+for posicao in range(tamanho):
+    print(num[posicao])
