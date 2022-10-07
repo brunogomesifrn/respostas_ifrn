@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04</title>
+    <style type="text/css">
+
+        /*
+        Se imprimir, Parágrafos devem mudar a cor para vermelho
+        e títulos de nível 1 devem mudar a cor para azul e ficar
+        centralizados.
+        */
+        @media print
+        {
+            p
+            {
+                color: red
+            }
+            h1
+            {
+                color: blue;
+                text-align: center;
+            }
+        }
+
+        /*
+        Se acessado apenas por telas (navegador), títulos de nível 2
+        devem mudar a cor para verde e ficar em itálico.
+        */
+        @media screen
+        {
+            h2
+            {
+                color: green;
+                font-style: italic;
+            }
+        }
+
+        /*
+        Se acessado apenas por telas (navegador) E que possuam
+        largura menor que 400px, títulos de nível 3 devem ficar
+        alinhados à direita.
+        */
+        @media screen and (max-width: 400px)
+        {
+            h3
+            {
+                text-align: right;
+            }
+        }
+
+        /*
+        Se acessado apenas por qualquer dispositivo com
+        largura maior que 400px E menor que 600px, títulos
+        de nível 4 devem mudar a cor para amarelo.
+        */
+        @media (min-width: 400px) and (max-width: 600px)
+        {
+            h4
+            {
+                color: yellow
+            }
+        }
+
+        /*
+        Se imprimir OU quando for acessado por telas 
+        menores que 400px, títulos de nível 5 devem
+        ficar centralizados na página.
+        */
+        @media print , (max-width: 400px)
+        {
+            h5
+            {
+                text-align: center;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <p>IFRN</p>
+    <p>Sistemas para Internet</p>
+    <h1>Front End</h1>
+    <h2>Media Querie</h2>
+    <h3>Responsividade</h3>
+    <h4>Aprendendo operadores</h4>
+    <h5>Operador ou</h5>
+</body>
+</html>
