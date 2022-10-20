@@ -1,0 +1,128 @@
+
+/* 
+Adicionar à página um título de seção de 
+nível 1 que deve estar configurado inicialmente 
+na cor azul. Se o usuário solicitar a impressão 
+da página, este título deve mudar para preto;
+*/
+h1
+{
+    color: blue
+}
+
+@media print
+{
+    h1
+    {
+        color: black
+    }
+}
+
+
+/*
+Na página, adicione um parágrafo qualquer e 
+configure para que ele seja exibido inicialmente 
+com tamanho de fonte de 10px. Quando a página 
+for acessada por um dispositivo com tela menor 
+que 400px, deve aumentar a fonte deste parágrafo 
+para 20px;
+*/
+p
+{
+    font-size: 10px;
+}
+
+@media screen and (max-width: 400px)
+{
+    p
+    {
+        font-size: 20px;
+    }
+}
+
+/*
+Na página, configurar para que, quando 
+for impressa, a cor do parágrafo deve 
+mudar para cinza.
+*/
+
+@media print
+{
+    p
+    {
+        color: gray
+    }
+}
+
+/*
+Adicionar um título de seção de nível 2. 
+Quando a página for acessada por um dispositivo 
+que tenha tela entre 300px e 500px, este título 
+deve aparecer com todas as letras maiúsculas, 
+alinhado ao centro da página e na cor marrom. 
+Ele deve voltar a configuração original quando 
+for impresso ou quando acessado por um leitor.
+*/
+
+@media screen and (min-width:300px) and (max-width:500px)
+{
+   h2
+   {
+        text-transform: uppercase;
+        text-align: center;
+        color: brown
+   }
+}
+
+/*
+Adicionar um título de seção de nível 3. Quando 
+a página for impressa ou for acessada por um dispositivo 
+com tela maior que 600px, o título de nível 3 deve aumentar 
+a fonte para 50px e ficar itálico.
+*/
+
+@media print, (min-width: 600px)
+{
+    h3
+    {
+        font-size: 50px;
+        font-style: italic;
+    }
+}
+
+
+
+/*
+Adicionar uma imagem à página. Configurar inicialmente 
+para que esta imagem apareça com uma largura fixa de 500px. 
+Ao ser acessada por um dispositivo com tela menor que 500px, 
+ela deve ter largura de 100% (ou seja, ocupar toda a horizontal).
+*/
+
+.imagem_1
+{
+    width: 500px;
+}
+
+@media (max-width: 500px)
+{
+    .imagem_1
+    {
+        width: 100%;
+    }
+}
+
+/*
+Adicionar à página uma div e dentro deste container uma imagem 
+e um parágrafo qualquer. Quando a página for acessada por uma 
+tela que seja menor que 500px automaticamente a div com todo 
+o seu conteúdo deve desaparecer.
+*/
+
+@media (max-width: 500px)
+{
+    .caixa
+    {
+        visibility:hidden;
+    }
+}

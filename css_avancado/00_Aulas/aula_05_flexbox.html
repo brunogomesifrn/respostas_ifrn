@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .container
+        {
+            background-color: green;
+            height: 300px;
+            /* O valor flex altera como os elementos
+            filhos serão distribuídos dentro do elemento
+            pai */
+            display: flex;
+            /* flex-direction definem como os elementos 
+            aparecerão: em linha, em coluna, ou invero */
+            flex-direction: row;
+            /* justify-content distribui os elementos no mesmo
+            eixo que foram definidos no flex-direction 
+            space-between - espaço apenas entre elementos
+            space-around - espaços laterais são metade dos internos
+            space-evenly - espaços laterais e internos iguais
+            flex-start - elementos no início sem espaço (padrão)
+            flex-end - elementos ao fim sem espaço
+            */
+            justify-content: space-evenly;
+            /* align-items - distribui os elementos no eixo 
+            transversal ao que foram definidos no flex-direction 
+            flex-start - elementos no início do eixo transversal (padrão)
+            flex-end - elementos ao fim do eixo transversal
+            center - elementos ao centro do eixo transversal
+            */ 
+            align-items: center;
+
+
+
+        }
+
+        .caixa
+        {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="caixa">1</div>
+        <div class="caixa">2</div>
+        <div class="caixa">3</div>
+        <div class="caixa">4</div>
+    </div>
+</body>
+</html>
