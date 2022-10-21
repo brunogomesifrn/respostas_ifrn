@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .container
+        {
+            background-color: brown;
+            height: 400px;
+            padding: 10px;
+            display: grid;
+
+            /*
+            grid-template-areas - Divide os elementos
+            proporcionalmente nas linhas e colunas
+            - Ex.: Se for definido que terá 3 colunas e o item 
+            ocupará todas elas, deverá repetir o nome do
+            item 3 vezes;
+            - Para fins de organização e visualização, organiza 
+            os valores entre aspas em linhas separadas 
+            (representando as linhas do container principal)
+            */
+            grid-template-areas:
+            'header header header'
+            'sidebar content content'
+            'footer footer footer';
+
+            /*
+            É possível usar a propriedade grid-template-rows
+            para definir a dimensão das linhas definidas
+            anteriormente
+            */
+            grid-template-rows: 100px auto 50px;
+        }
+        div
+        {
+            background-color: aqua;
+            padding: 15px;
+            border: 1px solid black;
+        }
+        /*
+        - Precisamos nomear cada item que será distribuído
+        pelo container principal através de áreas;
+        - A propriedade responsável por nomear é grid-area
+        */
+        #cabecalho
+        {
+            grid-area: header;
+        }
+        #menu
+        {
+            grid-area: sidebar;
+        }
+        #conteudo
+        {
+            grid-area: content;
+        }
+        #rodape
+        {
+            grid-area: footer;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="cabecalho">
+            <p>Cabeçalho</p>
+        </div>
+        <div id="menu">
+            <p>Menu</p>
+        </div>
+        <div id="conteudo">
+            <p>Conteúdo</p>
+        </div>
+        <div id="rodape">
+            <p>Rodapé</p>
+        </div>
+    </div>
+</body>
+</html>

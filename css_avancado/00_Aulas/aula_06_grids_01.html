@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .container
+        {
+            background-color: brown;
+            padding: 15px;
+            height: 400px;
+            /*
+            grids - permite distribuir os elementos através
+            de uma estrutura de linhas e colunas (bidimensional)
+            - É aplicado ao container principal (distribuí os elementos
+            internos);
+            */
+            display: grid;
+            /*
+            grid-template-columns - Divide o container principal
+            em colunas e define o tamanho de cada uma dessas
+            colunas. 
+            - A quantidade de valores será a quantidade
+            de colunas por linha.
+            - É possível usar qualquer unidade de medida do css, 
+            porcentagem e também a o valor auto.
+            */
+            grid-template-columns: 100px 100px auto 30%;
+            /*
+            grid-template-rows - Define o tamanho das linhas que o
+            container principal terá;
+            - É possível usar qualquer unidade de medida do css, 
+            porcentagem e também a o valor auto.
+            */
+            grid-template-rows: 100px auto;
+            /*
+            gap - define o espaço entre os itens do container principal
+            */
+            gap: 10px;
+        }
+        div
+        {
+            background-color: aqua;
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>
