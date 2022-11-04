@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container
+        {
+            width: 100vw;
+            height: 100vh;
+            background-color: gray;
+
+            display: grid;
+            grid-template-areas: 
+            'header header'
+            'nav main'
+            'footer footer';
+
+            grid-template-columns: 25% 75%;
+            grid-template-rows: 20% 70% 10%;
+        }
+        header
+        {
+            grid-area: header;
+            background-color: yellow;
+        }
+        nav
+        {
+            grid-area: nav;
+            background-color: red;
+        }
+        main
+        {
+            grid-area: main;
+            background-color: aqua;
+        }
+        footer
+        {
+            grid-area: footer;
+            background-color: darkmagenta;
+        }
+
+        @media screen and (max-width: 400px){
+            .container
+            {
+                grid-template-areas: 
+                'header'
+                'nav'
+                'main'
+                'footer';
+                grid-template-columns: 100vw;
+                grid-template-rows: 20% 10% 60% 10%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p>Cabeçalho</p>
+        </header>
+        <nav>
+            <p>Menu</p>
+        </nav>
+        <main>
+            <p>Conteúdo</p>
+        </main>
+        <footer>
+            <p>Rodapé</p>
+        </footer>
+    </div>
+</body>
+</html>
