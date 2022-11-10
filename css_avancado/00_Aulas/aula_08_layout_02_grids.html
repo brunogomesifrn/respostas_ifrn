@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        .container
+        {
+            background-color: gray;
+            width: 100vw;
+            height: 100vh;
+
+            display: grid;
+            grid-template-areas: 
+            'header header header'
+            'nav main aside'
+            'footer footer footer';
+
+            grid-template-columns: 20% 60% 20%;
+            grid-template-rows: 30% 60% 10%;
+        }
+        header
+        {
+            grid-area: header;
+            background-color: aqua;
+        }
+        nav
+        {
+            grid-area: nav;
+            background-color: cadetblue;
+        }
+        main
+        {
+            grid-area: main;
+            background-color: cornsilk;
+        }
+        aside
+        {
+            grid-area: aside;
+            background-color: darkolivegreen;
+        }
+        footer
+        {
+            grid-area: footer;
+            background-color: darkslateblue;
+        }
+
+        @media screen and (max-width: 860px) and (min-width: 550px){
+            .container
+            {
+                grid-template-areas: 
+                'header header'
+                'nav main'
+                'footer footer';
+                grid-template-columns: 20% 80%;
+            }
+            aside
+            {
+                display: none;
+            }
+
+        }
+
+        @media screen and (max-width: 549px){
+            .container{
+                grid-template-areas: 
+                'header'
+                'nav'
+                'main'
+                'aside'
+                'footer';
+                grid-template-columns: 100%;
+                grid-template-rows: 20% 10% 40% 20% 10%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p>Cabeçalho</p>
+        </header>
+        <nav>
+            <p>Menu</p>
+        </nav>
+        <main>
+            <p>Conteúdo</p>
+        </main>
+        <aside>
+            <p>Destaques</p>
+        </aside>
+        <footer>
+            <p>Rodapé</p>
+        </footer>
+    </div>
+</body>
+</html>
