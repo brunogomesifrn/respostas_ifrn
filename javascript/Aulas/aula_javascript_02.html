@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        OPERADORES DE COMPARAÇÃO (CONDICIONAIS)
+        Obs.: Sempre retornam valor lógico
+        > maior que
+        < menor que
+        >= maior ou igual
+        <= menor ou igual
+        == igual
+        != diferente
+        */
+       document.write(5>3);
+       document.write("<br />");
+       document.write(4<1);
+       document.write("<br />");
+       document.write(4>=4);
+       document.write("<br />");
+       document.write(5!=2);
+       document.write("<br />");
+       document.write(5==2);
+       document.write("<br />");
+
+       document.write(5==5.0);
+       document.write("<br />");
+       document.write(5===5.0);
+       document.write("<br />");
+
+       /*
+        OPERADORES LÓGICOS
+        Obs.: Sempre retornam valor lógico
+        && - e
+        || - ou
+        ! - não
+       */
+
+       document.write((5>3) && (10<1));
+       document.write("<br />");
+       document.write((5>3) || (10<1));
+       document.write("<br />");
+       document.write(!(10<1));
+       document.write("<br />");
+
+        /*
+        ESTRUTURAS CONDICIONAIS
+        - Estruturas que mudam o fluxo do algoritmo
+        - Executam uma(várias) instrução(ões) se
+        alguma condição for verdadeira
+        IF
+        IF...ELSE
+        */
+
+        var num = 10;
+        if(num==0){
+            document.write("Número é zero");
+        }else{
+            document.write("Número não é zero");
+        }
+
+
+
+    </script>
+</body>
+</html>

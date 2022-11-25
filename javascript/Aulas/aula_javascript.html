@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Comentário em 1 linha
+
+        /*
+            Comentário
+            em várias linhas
+        */
+        document.write("<h1>Olá Mundo</h1>");
+
+        var nome = "Bruno Gomes";
+        document.write("<p>",nome,"</p>");
+
+        var idade = 30;
+        var nota = 8.5;
+        var campus = "Canguaretama";
+        
+        /*
+        OPERADORES ARITMÉTICOS
+        Obs.: O retorno sempre será número
+        + soma
+        - subtração
+        * multiplicação
+        / divisão
+        % resto da divisão
+        ++ incrementa em 1
+        -- decrementa em 1
+        */
+
+        var num1 = 10;
+        var num2 = 20;
+        document.write(++num1);
+
+        // ++num  é igual a operação num+=1 ou num=num+1
+
+        document.write("<br />");
+
+        num1 = 5;
+        resultado1 = ++num1 + 5;
+        document.write(resultado1);
+
+        num1 = 5;
+        resultado1 = num1++ + 5;
+        document.write(resultado1);
+
+        var valor = 30;
+        var resultado = valor*15/100;
+
+        resultado = valor*0.15;
+
+        resultado = valor - valor*0.85;
+
+        document.write(resultado);
+
+        nome = prompt("Digite o seu nome");
+        document.write("O nome digitado foi: ",nome);
+
+        num = parseInt(prompt("Digite um número"));
+        resultado = num+2;
+        document.write(resultado);
+        
+        var nota = parseFloat(prompt("Digite uma nota"));
+
+    </script>
+</body>
+</html>

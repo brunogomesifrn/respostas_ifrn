@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        EVENTOS
+        São ações que podem ser detectadas no Javascript
+        Ex.: Clique ou movimento do mouse, edição de um campo,
+        atualização de uma página, entre outros.
+        */
+
+        function mensagemEntrada(){
+            alert("Mouse sobre o elemento");
+        }
+
+        function mensagemSaida(){
+            alert("Mouse saiu do elemento");
+        }
+
+        function somenteNumeros(){
+            alert("Digite somente números");
+        }
+
+        function clicou(){
+            alert("Bora bill");
+        }
+
+        document.write("Largura: "+window.outerWidth);
+        document.write("Altura: "+window.outerHeight);
+
+        window.location = "https://google.com";
+    </script>
+
+    <button onmouseover="mensagemEntrada()">Botão 1</button>
+    <button onmouseout="mensagemSaida()">Botão 2</button>
+
+    <form action="" method="">
+        Nome: <input type="text" name="nome" onchange="somenteNumeros()" />
+        CPF: <input type="text" name="cpf" onselect="somenteNumeros()" />
+    </form>
+
+    <p onclick="clicou()">Clique aqui 1 vez</p>
+    <p ondblclick="clicou()">Clique aqui 2 vezes</p>
+</body>
+</html>
