@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        FUNÇÃO
+        Conjunto de código que geralmente se repete
+        no programa, e toda vez que precisar executar
+        basta chamar a função. Evita a repetição de 
+        códigos e permite a modularização do programa.
+
+        Sintaxe:
+        function nome(){
+            
+        }
+        */
+
+        // Função que imprime um nome
+        function nome(){
+            document.write("IFRN");
+        }
+
+        nome();
+
+        // Função que retorna o nome
+        function nome_instituicao(){
+            return "IFRN";
+        }
+        //Possibilidade1: salvar em variável
+        var texto = nome_instituicao();
+        //Possibilidade2: imprimir a chamada
+        document.write(nome_instituicao());
+
+        //Função que recebe parâmetros e imprime
+        function somar(num1, num2){
+            var resultado = num1+num2;
+            document.write(resultado);
+        }
+
+        somar(10, 5);
+
+        //Função que recebe parâmetros e retorna
+        function multiplicar(num1, num2){
+            return num1*num2;
+        }
+
+        var resultado = multiplicar(10, 4);
+        document.write(multiplicar(10, 4));
+
+
+        /*
+        Criar uma função que recebe dois valores reais.
+        Deve fazer o cálculo da média aritmética e
+        retornar o resultado. Em seguida, deve pedir
+        para o usuário digitar os 2 valores, acessar a
+        função passando como parâmetros os 2 valores
+        digitados, e dependendo do resultado recebido
+        deverá imprimir "APROVADO" (se a média for 
+        maior ou igual a 60). "REPROVADO" (se a média 
+        for menor que 60);
+        */
+
+        function media(num1, num2){
+            return (num1+num2)/2;
+        }
+
+        var n1 = parseFloat(prompt("Digite número 1"));
+        var n2 = parseFloat(prompt("Digite número 2"));
+
+        var resultado = media(n1,n2);
+
+        if(resultado >= 60){
+            document.write("APROVADO");
+        }else{
+            document.write("REPROVADO");
+        }
+
+        /* POPUP-BOXES
+        - Alerta (alert)
+        - Confirmação (confirm)
+        - Entrada (prompt)
+        */
+
+        // alert - janela apenas com uma msg e botão OK
+        alert("Texto do alerta");
+
+        //confirm - Janela com msg e 2 botões que retornam
+        // True ou False
+
+        var resultado = confirm("Deseja continuar?");
+        if(resultado){
+            document.write("Clicou em OK");
+        }else{
+            document.write("Clicou em cancelar");
+        }
+
+    </script>
+</body>
+</html>
