@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        Revisando: Preça para o usuário digitar o valor
+        de um produto e o seu salário. A loja aplica um
+        desconto de acordo com o salário do cliente, então
+        faça o cálculo de acordo com as regras a seguir e 
+        imprima na página o valor final do produto.
+        10% para salários acima de 5.000,00
+        15% para salário acima de R$ 2.000,00 até R$ 5.000,00
+        20% para salário igual ou menor que R$ 2.000,00
+        */
+
+        /* 
+        - prompt é uma função de popup-box responsável
+        por permitir o usuário inserir dados
+        - Sempre o dado inserido será TEXTO
+        Se desejar converter, existem 2 funções (cast):
+        parseInt - converte para inteiro
+        parseFloat - converte para real
+       
+        var nome = prompt("Digite o seu nome");
+        
+        var idade_digitada = prompt("Digite a sua idade");
+        var idade = parseInt(idade_digitada)
+
+
+        var idade = parseInt(prompt("Digite a idade"));
+
+ */
+
+
+        var valor = parseFloat(prompt("Digite o valor do produto"));
+        var salario = parseFloat(prompt("Digite o seu salário"));
+
+        if(salario > 5000){
+            document.write(salario-salario*10/100);
+            document.write(salario-salario*0.1);
+            document.write(salario*0.9);
+        }
+        if(salario>2000 && salario<=5000){
+            document.write(salario-salario*15/100);
+        }
+        if(salario<=2000){
+            document.write(salario-salario*20/100);
+        }
+
+        if(salario > 5000){
+            document.write(salario-salario*10/100);
+            document.write(salario-salario*0.1);
+            document.write(salario*0.9);
+        }else{
+            if(salario>2000 && salario<=5000){
+                document.write(salario-salario*15/100);
+            }else{
+                if(salario<=2000){
+                    document.write(salario-salario*20/100);
+                }
+            }
+        }
+
+        if(salario > 5000)
+            document.write(salario-salario*10/100);
+        else 
+            if(salario>2000 && salario<=5000)
+                document.write(salario-salario*15/100);
+            else
+                document.write(salario-salario*20/100);
+            
+        
+
+        
+        
+
+
+    </script>
+</body>
+</html>

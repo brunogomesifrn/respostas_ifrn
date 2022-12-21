@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p><a href="https://portal.ifrn.edu.br" 
+        id="ifrn">Link IFRN</a></p>
+
+    <form action="" method="">
+        <p>Nome: <input type="text" name="nome" 
+            id="nome"/></p>
+    </form>
+    <p><button onclick="exibe_nome()">Exibir
+    </button></p>
+
+    <p><button onclick="muda_nome()">Mudar
+    </button></p>
+
+    <p><button onclick="desativar()">Desativar
+    </button></p>
+
+    <script type="text/javascript">
+        var link_ifrn = document.getElementById("ifrn");
+        alert(link_ifrn.href);
+        link_ifrn.href="https://google.com";
+
+        function exibe_nome(){
+            var campo_nome = document.getElementById("nome");
+            alert(campo_nome.value);
+        }
+
+        function muda_nome(){
+            var campo_nome = document.getElementById("nome");
+            campo_nome.value = "Novo Texto";
+        }
+
+        function desativar(){
+            var campo_nome = document.getElementById("nome");
+            campo_nome.disabled = true;
+        }
+    </script>
+</body>
+</html>
