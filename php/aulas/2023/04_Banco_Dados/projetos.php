@@ -12,12 +12,19 @@
     <p>Projetos cadastrados:</p>
     <?php
     include "conexao.php";
-    $sql = "SELECT * FROM projetos";
+    $sql = "SELECT * FROM projeto";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-            echo "<p>Codigo: " . $row["codigo"]. " - Nome: " . $row["nome"]. "</p>";
+            echo "<p>Codigo: " . $row["codigo"]. 
+            " - Nome: " . $row["nome"]. 
+            "- Data: ".$row["data_inicio"].
+            "- Valor: ".$row["valor"].
+            " | <a href='projeto_bd_deletar.php?codigo=".$row["codigo"]."'>REMOVER</a>".
+            " | <a href='projeto_cadastrar.php?codigo=".$row["codigo"]."'>EDITAR</a>".
+            "</p>";
+            
         }
     } else {
         echo "Nenhum projeto cadastrado";

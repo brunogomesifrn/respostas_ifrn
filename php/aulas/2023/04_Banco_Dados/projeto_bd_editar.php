@@ -8,8 +8,11 @@ $valor = $_POST['valor'];
 include "conexao.php";
 
 // Inserir normalmente
-$sql = "INSERT INTO projeto (codigo, nome, data_inicio, valor)
-VALUES ('$codigo', '$nome', '$data_inicio', $valor)";
+$sql = "UPDATE projeto SET
+ nome='$nome',
+ data_inicio ='$data_inicio',
+ valor=$valor
+ WHERE codigo=$codigo";
 
 if ($conn->query($sql) === TRUE) {
   $conn->close();
