@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let numero = 30;
+        if(numero>0){
+            document.write("<p>Número positivo</p>");
+        }else{
+            if(numero<0){
+               document.write("<p>Número negativo");
+            }else{
+                document.write("<p>Número nulo<p>");
+            }
+        }
+        
+        
+        if(numero>0)
+            document.write("<p>Número Positivo</p>")
+        else if(numero<0)
+            document.write("<p>Número Negativo</p>")
+        else
+            document.write("<p>Número Nulo</p>")
+
+        alert("Oi, seja bem-vindo");
+
+        let nome = prompt("Digite seu nome");
+        document.write("<p>Nome: ",nome,"</p>");
+
+        /*
+        Peça para o usuário digitar um número inteiro,
+        se este número estiver entre 5 e 15, imprima
+        CORRETO, caso contrário, imprima ERROU.
+        */
+        let numero_2 = parseInt(prompt("Digite um número"));
+        if((numero_2>5) && (numero<15)){
+            document.write("CORRETO");
+        }else{
+            document.write("ERROU");
+        }
+
+        // ESTRUTURA DE REPETIÇÃO
+
+        for(let i=0; i<10; i++){
+            document.write("<p>IFRN</p>");
+        }
+
+
+    </script>
+</body>
+</html>

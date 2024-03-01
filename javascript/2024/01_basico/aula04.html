@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function imprimir(){
+            document.write("<p>IFRN</p>");
+        }
+
+        function instituicao(){
+            return "<h1>IFRN</h1>";
+        }
+
+        function soma(numero1, numero2){
+            document.write("<p>Resultado:",(numero1+numero2),"</p>");
+        }
+
+        function multiplicacao(numero1, numero2){
+            return ("<p>Resultado:"+(numero1*numero2)+"</p>");
+        }
+
+        function mensagem(){
+            alert("Booora!");
+        }
+
+        function visualizar(){
+            let valor = document.getElementById("nome");
+            alert(valor.value);
+        }
+
+        function mudar(){
+            let valor = document.getElementById("nome");
+            valor.value = "Vanessa";
+        }
+
+        function mudarlink(){
+            let linkpagina = document.getElementById("destino");
+            linkpagina.href = "https://portal.ifrn.edu.br";
+        }
+    </script>
+</head>
+<body onload="mudarlink()">
+    <script type="text/javascript">
+        imprimir();
+        /*
+        Se a função retornar algo, ela
+        deve estar dentro do comando
+        de impressão ou deve ser atribuída
+        a uma variável.
+        */
+        document.write(instituicao());
+        let nome = instituicao();
+
+        soma(5, 15);
+
+        let resultado = multiplicacao(2, 15);
+        document.write("Teste");
+        document.write(resultado);
+
+    </script>
+
+    <button onclick="mensagem()">Clicar</button>
+
+    <form action="" method="post">
+        <p>Nome:<input type="text" name="nome" id="nome" /></p>
+    </form>
+
+    <button onclick="visualizar()">Ver nome digitado</button>
+
+    <button onclick="mudar()">Mudar nome do campo</button>
+
+    <p><a href="https://google.com" id="destino">Vá para o Google (confia!)</a></p>
+</body>
+</html>
