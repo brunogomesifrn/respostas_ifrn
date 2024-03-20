@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cadastro de Aluno</h1>
+    <form action="aula04_destino.php" method="post">
+        <p>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome"/>
+        </p>
+
+        <p>
+            <label for="nasc">Data de Nascimento:</label>
+            <input type="date" name="nascimento" id="nasc" />
+        </p>
+
+        <p>
+            <label for="idade">Idade:</label>
+            <input type="number" name="idade" id="idade"
+            step="1" min="1" max="99"/>
+        </p>
+
+        <p>
+            Sexo:<br />
+            
+            <input type="radio" name="sexo" value="Masculino" id="m"/>
+            <label for="m">Masculino</label><br />
+
+            <input type="radio" name="sexo" value="Feminino" id="f"/>
+            <label for="f">Feminino</label><br />
+
+            <input type="radio" name="sexo" value="Prefiro não informar" id="n"/>
+            <label for="n">Prefiro não informar</label>
+        </p>
+        
+        <p>
+            Disciplina(s) que mais gosta:<br />
+            
+            <input type="checkbox" name="disciplinas[]" value="Prog. para Int." id="progint"/>
+            <label for="progint">Prog. para Int.</label><br />
+
+            <input type="checkbox" name="disciplinas[]" value="Matemática" id="mat" />
+            <label for="mat">Matemática</label><br />
+
+            <input type="checkbox" name="disciplinas[]" value="Espanhol" id="espanhol" />
+            <label for="espanhol">Espanhol</label>
+        </p>
+
+        <p>
+            <input type="submit" value="Cadastrar" />
+        </p>
+
+
+
+    </form>
+</body>
+</html>
