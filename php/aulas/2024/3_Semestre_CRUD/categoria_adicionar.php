@@ -34,6 +34,7 @@
     <form action="bd_categoria_editar.php" method="post">
 
     <?php
+    echo "<input type='hidden' name='id' value='$id' />";
     }else{
     ?>
 
