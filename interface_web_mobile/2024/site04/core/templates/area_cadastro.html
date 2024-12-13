@@ -8,9 +8,10 @@
 </head>
 <body>
     <h1>Cadastro de Área</h1>
-    
-    <form method="post">
 
+    <form method="post">
+        {% csrf_token %}
+        {{form}}
         <p><input type="submit" value="Registrar" /></p>
     </form>
 
