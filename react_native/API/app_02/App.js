@@ -7,6 +7,8 @@ import Index from './src/screens/Index';
 import Perfil from './src/screens/Perfil';
 import Estado from './src/screens/Estado';
 import Areas from './src/screens/Areas';
+import Areas_Cadastrar from
+ "./src/screens/Areas_Cadastrar";
 
 const Stack = createNativeStackNavigator();
 
@@ -18,6 +20,8 @@ export default function App() {
         <Stack.Screen name="Perfil" component={Perfil} />
         <Stack.Screen name="Estado" component={Estado} />
         <Stack.Screen name="Areas" component={Areas} />
+        <Stack.Screen name="Areas_Cadastrar" 
+        component={Areas_Cadastrar} />
       </Stack.Navigator>
     </NavigationContainer>
   );

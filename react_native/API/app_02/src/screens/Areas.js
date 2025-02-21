@@ -1,4 +1,4 @@
-import {View, Text, FlatList} from 'react-native'
+import {View, Text, FlatList, Button} from 'react-native'
 import { useEffect, useState } from 'react'
 import api from '../config/Api'
 
@@ -23,6 +23,12 @@ export default function App({navigation}){
     return (
         <View>
             <Text>ÁREAS</Text>
+
+            <Button 
+            title="Cadastrar Área"
+            onPress={()=>navigation.navigate("Areas_Cadastrar")} 
+            />
+
             <FlatList 
             data={areas} 
             keyExtractor={({id})=>id}
