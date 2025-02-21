@@ -14,6 +14,12 @@ def index(request):
 
 
 def perfil(request):
+    
+context = {
+
+'nome': request.SESSION['nome']
+'email': request.SESSION['email']
+}
     return render(request, 'perfil.html')
 
 def registro(request):
@@ -44,7 +50,8 @@ def autenticar(request):
                 headers={"Content-Type": "application/json"})
         
         if('nome' in resposta.json()):
-
+            request.SESSION['nome'] = resposta.json()['nome']
+            request.SESSION['email'] = resposta.json()['email']
             
             return redirect("perfil")
         else:
