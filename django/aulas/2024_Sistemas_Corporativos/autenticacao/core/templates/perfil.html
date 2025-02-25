@@ -8,10 +8,10 @@
 </head>
 <body>
     <h1>Página de Perfil</h1>
-    <p>Olá {{ user.nome }}</p>
-    <p>Seu e-mail: {{ user.email}}</p>
-    <p>Seu CPF: {{ user.cpf }}</p>
+    <p>Olá {{ nome }}</p>
+    <p>Seu e-mail: {{ email}}</p>
     
     <p><a href="{% url 'index' %}">Inicial</a></p>
+    <p><a href="{% url 'logout' %}">Desconectar</a></p>
 </body>
 </html>
