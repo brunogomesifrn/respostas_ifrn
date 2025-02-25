@@ -2,7 +2,6 @@ import { Text, View, Button, StyleSheet, TextInput} from 'react-native';
 import React, { useState } from 'react'
 import api from "../config/Api"
 
-
 export default function App({navigation}) {
     
     const [text, onChangeText] = useState();
@@ -16,11 +15,11 @@ export default function App({navigation}) {
     await api.put("/areas/adicionar/", area)
       .then((response) => { 
         navigation.navigate("Areas")
-      }).catch((err) => { // Acessar o catch quando a API retornar status erro
-        if (err.response) { // Acessa o IF quando a API retornar erro
-          Alert.alert("Ops", err.response.data.mensagem);
-        } else { // Acessa o ELSE quando a API não responder
-          Alert.alert("Ops", "Erro: Tente mais tarde!");
+      }).catch((err) => { 
+        if (err.response) { 
+          Alert.alert("Erro", err.response.data.mensagem);
+        } else { 
+          Alert.alert("Erro", "Erro: Tente mais tarde!");
         }
       });
   }

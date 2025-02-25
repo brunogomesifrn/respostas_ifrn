@@ -9,8 +9,6 @@ export default function App({route, navigation}) {
 
   const editar = async () => {
 
-    //alert(text)
-
     const area = {
         "id": route.params.id,
         "nome": text
@@ -21,11 +19,11 @@ export default function App({route, navigation}) {
     await api.post(rota, area)
       .then((response) => { 
         navigation.navigate("Areas")
-      }).catch((err) => { // Acessar o catch quando a API retornar status erro
-        if (err.response) { // Acessa o IF quando a API retornar erro
-          Alert.alert("Ops", err.response.data.mensagem);
-        } else { // Acessa o ELSE quando a API não responder
-          Alert.alert("Ops", "Erro: Tente mais tarde!");
+      }).catch((err) => { 
+        if (err.response) { 
+          Alert.alert("Erro", err.response.data.mensagem);
+        } else {
+          Alert.alert("Erro", "Erro: Tente mais tarde!");
         }
       });
   }

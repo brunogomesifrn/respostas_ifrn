@@ -5,41 +5,34 @@ import api from "../config/Api";
 export default function App({navigation}) {
   const [areas, setAreas] = useState([]);
 
-  // Função para recuperar os usuários
   const getAreas = async () => {
-    // Requisição para a API indicando a rota
     await api.get("/areas/?format=json")
-      .then((response) => { // Acessar o then quando a API retornar status sucesso
-        //console.log(response.data.users);
-        // Atribuir os dados retornado da API
+      .then((response) => { 
         setAreas(response.data);
-      }).catch((err) => { // Acessar o catch quando a API retornar status erro
-        if (err.response) { // Acessa o IF quando a API retornar erro
-          Alert.alert("Ops", err.response.data.mensagem);
-        } else { // Acessa o ELSE quando a API não responder
-          Alert.alert("Ops", "Erro: Tente mais tarde!");
+      }).catch((err) => { 
+        if (err.response) { 
+          Alert.alert("Erro", err.response.data.mensagem);
+        } else { 
+          Alert.alert("Erro", "Erro: Tente mais tarde!");
         }
       });
   }
 
   const removerArea = async (id) => {
-    // Requisição para a API indicando a rota
     rota = "/areas/remover/"+id+"/"
-    
     await api.delete(rota)
       .then((response) => { 
         getAreas();
-      }).catch((err) => { // Acessar o catch quando a API retornar status erro
-        if (err.response) { // Acessa o IF quando a API retornar erro
-          Alert.alert("Ops", err.response.data.mensagem);
-        } else { // Acessa o ELSE quando a API não responder
-          Alert.alert("Ops", "Erro: Tente mais tarde!");
+      }).catch((err) => { 
+        if (err.response) { 
+          Alert.alert("Erro", err.response.data.mensagem);
+        } else { 
+          Alert.alert("Erro", "Erro: Tente mais tarde!");
         }
       });
   }
 
-  // Executar quando o usuário carregar a tela e chamar a função getUsers
-  useEffect(() => {
+    useEffect(() => {
     getAreas();
   }, []);
 
