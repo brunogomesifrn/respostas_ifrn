@@ -1,180 +1,180 @@
-# print("Olá Mundo")
+print("Olá Mundo")
 
-# # Comentário de 1 linha
+# Comentário de 1 linha
 
-# """
-# Comentário
-# de várias
-# linhas
-# """
+"""
+Comentário
+de várias
+linhas
+"""
 
-# '''
-# Comentário
-# de várias
-# linhas
-# '''
+'''
+Comentário
+de várias
+linhas
+'''
 
-# '''
-# VARIÁVEIS
-# - Servem para armazenar TEMPORARIAMENTE
-# algum dado;
-# - Python é fracamente tipada, ou seja,
-# não é necessário informar o tipo da
-# variável
-# '''
+'''
+VARIÁVEIS
+- Servem para armazenar TEMPORARIAMENTE
+algum dado;
+- Python é fracamente tipada, ou seja,
+não é necessário informar o tipo da
+variável
+'''
 
-# idade = 30
-# nome = "Bruno Gomes"
-# nota = 8.5
-# aberto = True
+idade = 30
+nome = "Bruno Gomes"
+nota = 8.5
+aberto = True
 
-# print(nome)
-# print("nome")
+print(nome)
+print("nome")
 
-# # , é o operador de concatenação
+# , é o operador de concatenação
 
-# print("O nome é :",nome)
+print("O nome é :",nome)
 
-# '''
-# LEITURA DE DADOS
-# - Se usa a função input()
-# - Ela sempre retorna texto
-# - Se desejar ler número, precisa
-# converter (cast)
-# '''
+'''
+LEITURA DE DADOS
+- Se usa a função input()
+- Ela sempre retorna texto
+- Se desejar ler número, precisa
+converter (cast)
+'''
 
-# nome_digitado = input("Digite o seu nome")
-# print("O nome digitado é: ",nome_digitado)
+nome_digitado = input("Digite o seu nome")
+print("O nome digitado é: ",nome_digitado)
 
-# quantidade = int(input("Digite a qtd de aulas"))
-# print(quantidade)
+quantidade = int(input("Digite a qtd de aulas"))
+print(quantidade)
 
-# nota = float(input("Digite sua nota"))
-# print(nota)
+nota = float(input("Digite sua nota"))
+print(nota)
 
-# '''
-# OPERADORES ARITMÉTICOS
-# + soma
-# - subtração
-# * multiplicação
-# / divisão
-# % resto da divisão
+'''
+OPERADORES ARITMÉTICOS
++ soma
+- subtração
+* multiplicação
+/ divisão
+% resto da divisão
 
-# Obs.: sempre retornam valor numérico
-# '''
-# numero_1 = 10
-# numero_2 = 20
-# resultado = numero_1 + numero_2
-# print(resultado)
+Obs.: sempre retornam valor numérico
+'''
+numero_1 = 10
+numero_2 = 20
+resultado = numero_1 + numero_2
+print(resultado)
 
-# '''
-# ATIVIDADE :D
-# Peça para o usuário digitar duas notas,
-# posteriormente realize o calculo da média
-# aritmética entre as notas e imprima o 
-# resultado!
-# '''
+'''
+ATIVIDADE :D
+Peça para o usuário digitar duas notas,
+posteriormente realize o calculo da média
+aritmética entre as notas e imprima o 
+resultado!
+'''
 
-# nota_1 = int(input("Digite a primeira nota"))
-# nota_2 = int(input("Digite a segunda nota"))
-# resultado = (nota_1 + nota_2) / 2
-# print("Média: ",resultado)
+nota_1 = int(input("Digite a primeira nota"))
+nota_2 = int(input("Digite a segunda nota"))
+resultado = (nota_1 + nota_2) / 2
+print("Média: ",resultado)
 
-# '''
-# ATIVIDADE :P
-# Peça para o usuário digitar um número
-# inteiro. Posteriormente, imprima o
-# quadrado do número.
-# '''
+'''
+ATIVIDADE :P
+Peça para o usuário digitar um número
+inteiro. Posteriormente, imprima o
+quadrado do número.
+'''
 
-# numero = int(input("Digite um número"))
-# print(numero*numero)
+numero = int(input("Digite um número"))
+print(numero*numero)
 
-# '''
-# OPERADORES CONDICIONAIS/COMPARAÇÃO
-# > maior
-# >= maior ou igual
-# < menor
-# <= menor ou igual
-# == igual
-# != diferente
+'''
+OPERADORES CONDICIONAIS/COMPARAÇÃO
+> maior
+>= maior ou igual
+< menor
+<= menor ou igual
+== igual
+!= diferente
 
-# Obs.: sempre retornam valores booleanos
-# '''
+Obs.: sempre retornam valores booleanos
+'''
 
-# print(10>3)
-# print(11<5)
-# print(5>=5)
-# print(5>=10)
-# print(6==10)
-# print(5!=5)
+print(10>3)
+print(11<5)
+print(5>=5)
+print(5>=10)
+print(6==10)
+print(5!=5)
 
-# '''
-# OPERADORES LÓGICOS
-# and E
-# or OU
-# not NEGAÇÃO
+'''
+OPERADORES LÓGICOS
+and E
+or OU
+not NEGAÇÃO
 
-# Obs.: sempre retornam valores booleanos
-# '''
+Obs.: sempre retornam valores booleanos
+'''
 
-# print((10>5) and (6==4)) 
-# print((5!=5) or (5>=5))
-# print(not(10==0))
+print((10>5) and (6==4)) 
+print((5!=5) or (5>=5))
+print(not(10==0))
 
 
-# '''
-# ESTRUTURAS CONDICIONAIS
-# if
-# if...else
-# '''
+'''
+ESTRUTURAS CONDICIONAIS
+if
+if...else
+'''
 
-# numero = int(input("Digite um número"))
-# if numero==0:
-#     print("O número é ZERO")
+numero = int(input("Digite um número"))
+if numero==0:
+    print("O número é ZERO")
 
-# # POSITIVO x NEGATIVO
-# if numero>=0:
-#     print("O número é POSITIVO")
-# else:
-#     print("O número é NEGATIVO")
+# POSITIVO x NEGATIVO
+if numero>=0:
+    print("O número é POSITIVO")
+else:
+    print("O número é NEGATIVO")
 
-# # POSITIVO x NULO x NEGATIVO
-# if numero>0:
-#     print("POSITIVO")
-# else:
-#     if numero==0:
-#         print("NULO")
-#     else:
-#         print("NEGATIVO")
+# POSITIVO x NULO x NEGATIVO
+if numero>0:
+    print("POSITIVO")
+else:
+    if numero==0:
+        print("NULO")
+    else:
+        print("NEGATIVO")
 
-# if numero>0:
-#     print("POSITIVO")
-# elif numero==0:
-#     print("NULO")
-# else:
-#     print("NEGATIVO")
+if numero>0:
+    print("POSITIVO")
+elif numero==0:
+    print("NULO")
+else:
+    print("NEGATIVO")
 
-# '''
-# LISTA DE DADOS
-# - Uma estrutura que armazena
-# vários valores ao mesmo tempo
-# - Utiliza colchetes []
-# '''
+'''
+LISTA DE DADOS
+- Uma estrutura que armazena
+vários valores ao mesmo tempo
+- Utiliza colchetes []
+'''
 
-# numeros = [5, 10, 8, -3]
+numeros = [5, 10, 8, -3]
 
-# # Imprimir o número da posição 0
-# print(numeros[0])
+# Imprimir o número da posição 0
+print(numeros[0])
 
-# #Substituir o 8 por 15
-# numeros[2] = 15
-# print(numeros[2])
+#Substituir o 8 por 15
+numeros[2] = 15
+print(numeros[2])
 
-# '''
-# ESTRUTURA DE REPETIÇÃO
+'''
+ESTRUTURA DE REPETIÇÃO
 
-# '''
+'''
 
 for num in [1, 2, 3, 4, 5]:
     print("IFRN")
