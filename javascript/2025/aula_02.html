@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        document.write("<h1>IFRN</h1>");
+        console.log("Teste de Log");
+
+        /*
+        POP-UPs
+        São janelas abertas a partir
+        do navegador
+        alert - exibe uma mensagem
+        prompt - recebe uma informação
+        confirm - pergunta se confirma ou não (booleano)
+        */
+        
+        alert("Aqui é um aviso!");
+        
+        let nome = prompt("Digite seu nome");
+        console.log("Nome: "+nome);
+
+        let idade = parseInt(prompt("Digite a sua idade"));
+        if(idade>=18){
+            console.log("Maior de idade");
+            document.write("<p>Sua idade: "+idade);
+            document.write("<br />Você é maior de idade</p>");
+        }else{
+            console.log("Menor de idade");
+            
+        }
+
+        let media = parseFloat(prompt("Digite a sua média"));
+        if(media >= 6){
+            console.log("Passoooou!"+media);
+        }else{
+            console.log("Tente de novo");
+        }
+
+        /*
+        Peça para o usuário digitar o valor de um
+        produto, logo depois peça para digitar o
+        desconto em % que o usuário terá. Ao final,
+        imprima no terminal o valor atualizado do produto.
+        */
+        let valor = parseFloat(prompt("Digite o valor"));
+        let desconto = parseInt(prompt("Digite o desconto"));
+        valor_atualizado = valor-(valor*desconto/100);
+        console.log("Novo Valor: "+valor_atualizado);
+
+
+
+
+
+
+    </script>
+</body>
+</html>
