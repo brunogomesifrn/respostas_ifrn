@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="">
+        <p>
+            Nome:
+            <input type="text" name="nome" id="nome"/>
+        </p>
+    </form>
+
+        <p><button onclick="visualizar()">Visualizar</button></p>
+        <p><button onclick="alterar()">Alterar</button></p>
+        <p><button onclick="desativar()">Desativar</button></p>
+    <script type="text/javascript">
+        function visualizar(){
+            let campo = document.getElementById("nome");
+            alert(campo.value);
+        }
+        function alterar(){
+            let campo = document.getElementById("nome");
+            campo.value = "Huuummmmm";
+        }
+        function desativar(){
+            let campo = document.getElementById("nome");
+            campo.disabled = true;
+        }
+    </script>
+</body>
+</html>
