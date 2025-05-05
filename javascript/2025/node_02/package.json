@@ -1,0 +1,14 @@
+{
+  "name": "node_02",
+  "version": "1.0.0",
+  "description": "Projeto em Sala de Aula sobre Modulos Externos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "BG",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
