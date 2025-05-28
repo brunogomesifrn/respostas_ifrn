@@ -12,10 +12,12 @@ def cadastro(request):
 def resultado(request):
     nome = request.POST['nome']
     cpf = request.POST['cpf']
-
+    linguagem = request.POST['linguagem']
+    
     contexto = {
-        'nome_digitado':nome,
-        'cpf': cpf
+        'nome_digitado': nome,
+        'cpf': cpf,
+        'linguagem': linguagem
         }
 
     return render(request, 'resultado.html', contexto)
