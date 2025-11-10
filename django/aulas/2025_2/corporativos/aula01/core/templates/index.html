@@ -9,6 +9,15 @@
 </head>
 <body>
     <h1>Página Inicial</h1>
+    
+    <p><a href="{% url 'autenticacao' %}">Login</a></p>
+    <p><a href="{% url 'perfil' %}">Perfil</a></p>
+    <p><a href="{% url 'desconectar' %}">Desconectar</a></p>
+    
     <p><a href="{% url 'contato' %}">Link para Contato</a></p>
+    <p><a href="{% url 'areas' %}">Gerenciar Áreas</a></p>
+    <p><a href="{% url 'publicos' %}">Gerenciar Públicos</a></p>
+    <p><a href="{% url 'instrutores' %}">Gerenciar Instrutores</a></p>
+    <p><a href="{% url 'cursos' %}">Gerenciar Cursos</a></p>
 </body>
 </html>

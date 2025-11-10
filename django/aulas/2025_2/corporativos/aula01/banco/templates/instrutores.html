@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Gerenciamento de Instrutores</h1>
+    <p><a href="{% url 'instrutor_cadastro' %}">Cadastro</a></p>
+
+    <p>Lista de Instrutores</p>
+    {% for instrutor in instrutores %}
+    <p>{{instrutor.nome}} 
+        | <a href="{% url 'instrutor_editar' instrutor.id %}">EDITAR</a>
+        | <a href="{% url 'instrutor_remover' instrutor.id %}">REMOVER</a>
+    </p>
+    {% empty %}
+    <p>Nenhum Instrutor cadastrado</p>
+    {% endfor %}
+
+</body>
+</html>

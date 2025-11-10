@@ -7,11 +7,14 @@
 </head>
 <body>
     <h1>Gerenciamento de Áreas</h1>
-    <p>Cadastro</p>
+    <p><a href="{% url 'area_cadastro' %}">Cadastro</a></p>
 
     <p>Lista de Áreas</p>
     {% for area in areas %}
-    <p>{{area}}</p>
+    <p>{{area.nome}} 
+        | <a href="{% url 'area_editar' area.id %}">EDITAR</a>
+        | <a href="{% url 'area_remover' area.id %}">REMOVER</a>
+    </p>
     {% empty %}
     <p>Nenhuma área cadastrada</p>
     {% endfor %}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Gerenciamento de Públicos</h1>
+    <p><a href="{% url 'publico_cadastro' %}">Cadastro</a></p>
+
+    <p>Lista de Públicos</p>
+    {% for publico in publicos %}
+    <p>{{publico.nome}} 
+        | <a href="{% url 'publico_editar' publico.id %}">EDITAR</a>
+        | <a href="{% url 'publico_remover' publico.id %}">REMOVER</a>
+    </p>
+    {% empty %}
+    <p>Nenhum Público cadastrado</p>
+    {% endfor %}
+
+</body>
+</html>
