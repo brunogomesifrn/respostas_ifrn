@@ -7,8 +7,18 @@
 </head>
 <body>
     <p>Página Inicial</p>
+
+    {% if user.is_authenticated %}
+        <p><a href="{% url 'perfil' %}">Perfil</a></p>
+        <p><a href="{% url 'desconectar' %}">Desconectar</a></p>
+    {% else %}
+        <p><a href="{% url 'login' %}">Login</a></p>
+    {% endif %}
+    
+    
     <p><a href="{% url 'categorias' %}">Gerenciar 
         Categorias</a></p>
     <p><a href="{% url 'areas' %}">Gerenciar Áreas</a></p>
+    <p><a href="{% url 'publicos' %}">Gerenciar Públicos</a></p>
 </body>
 </html>
