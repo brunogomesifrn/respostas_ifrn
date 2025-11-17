@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cadastro Áreas</h1>
+    <form action="
+    {% if area %}
+    {{ url_for('area_editar', id=area.id) }}
+    {% else %}
+    {{ url_for('areas_cadastrar') }}
+    {% endif %}
+    " method="post">
+        <p>
+            Nome:
+            <input type="text" name="nome" value="{% if area %}{{area.nome}}{% endif %}">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+</body>
+</html>
