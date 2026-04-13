@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cadastro Pessoal</h1>
+    <form action="{% url 'resposta_01' %}" method="POST">
+        {% csrf_token %}
+        <p>
+            Nome:
+            <input type="text" name="nome">
+        </p>
+        <p>
+            CPF:
+            <input type="text" name="cpf">
+        </p>
+        <p>
+            Selecione a melhor disciplina:<br/>
+            <input type="radio" name="disc" value="POO">
+            POO<br />
+            <input type="radio" name="disc" value="Algoritmos">
+            Algoritmos
+        </p>
+        <p>
+            <input type="submit" value="Enviar" >
+        </p>
+    </form>
+</body>
+</html>
