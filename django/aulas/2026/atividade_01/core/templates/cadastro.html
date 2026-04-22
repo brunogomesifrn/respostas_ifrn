@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <form action="{% url 'sucesso' %}" method="post">
+        {% csrf_token %}
+        <p>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" />
+        </p>
+
+        <p>
+            <label for="cpf">CPF:</label>
+            <input type="text" name="cpf" id="cpf" />
+        </p>
+
+        <p>
+            <label for="nascimento">Nascimento:</label>
+            <input type="date" name="nascimento" id="nascimento" />
+        </p>
+
+        <p>
+            Selecione a sua ocupação:<br />
+            <input type="checkbox" name="ocupacao[]" value="Discente" />Discente<br />
+            <input type="checkbox" name="ocupacao[]" value="Docente" />Docente<br />
+            <input type="checkbox" name="ocupacao[]" value="Técnico" />Técnico<br />
+        </p>
+
+        <p><input type="submit" value="Cadastrar" /></p>
+    </form>
+</body>
+</html>

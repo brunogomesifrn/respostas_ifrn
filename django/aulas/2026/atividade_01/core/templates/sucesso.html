@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Resultado:</h1>
+    <p>Nome: {{nome}}</p>
+    <p>CPF: {{cpf}}</p>
+    <p>Data de Nascimento: {{nascimento}}</p>
+    <p>
+        Ocupações:<br />
+        {% for ocupacao in ocupacoes %}
+        {{ocupacao}}<br />
+        {% endfor %}
+    </p>
+    <p><a href="{% url 'inicial' %}">Voltar para Inicial</a></p>
+</body>
+</html>
