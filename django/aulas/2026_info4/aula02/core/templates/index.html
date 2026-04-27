@@ -1,12 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'estilo.css' %}" >
 </head>
 <body>
     <h1>Página Inicial</h1>
+    <p>Olá {{nome}}</p>
+    <p>Você estuda em {{instituto}}</p>
+    <p><img src="{% static 'ifrn.png' %}" alt="Imagem do IFRN" ></p>
     <p><a href="{% url 'perfil' %}">Ir para Perfil</a></p>
 </body>
 </html>

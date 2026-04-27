@@ -1,7 +1,13 @@
 from django.shortcuts import render
 
 def inicial(request):
-    return render(request, 'index.html')
+    nome = 'BG'
+    instituicao = 'IFRN'
+    context = {
+        'nome': nome,
+        'instituto': instituicao
+    }
+    return render(request, 'index.html', context)
 
 def contato(request):
     return render(request, 'contato.html')
