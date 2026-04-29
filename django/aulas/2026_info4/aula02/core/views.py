@@ -14,3 +14,13 @@ def contato(request):
 
 def perfil(request):
     return render(request, 'perfil.html')
+
+def cadastro_01(request):
+    return render(request, 'cadastro_01.html')
+
+def resposta_01(request):
+    nome = request.POST['nome']
+    context = {
+        'nome': nome
+    }
+    return render(request, 'resposta_01.html', context)

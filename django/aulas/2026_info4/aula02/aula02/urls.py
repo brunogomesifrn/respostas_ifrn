@@ -23,4 +23,6 @@ urlpatterns = [
     path('', inicial, name='inicial'),
     path('contato/', contato, name='contato'),
     path('perfil/', perfil, name='perfil'),
+    path('cadastro_01/', cadastro_01, name='cadastro_01'),
+    path('resposta_01/', resposta_01, name='resposta_01'),
 ]
