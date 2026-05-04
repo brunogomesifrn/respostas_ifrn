@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IFRN FIC – Cursos de Formação Inicial e Continuada</title>
+  <link rel="stylesheet" href="{% static 'assets/css/base.css' %}" />
+  <link rel="stylesheet" href="{% static 'assets/css/index.css' %}" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">IF</div>
+      <div class="logo-text">IFRN FIC<span>Formação Inicial e Continuada</span></div>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">Inicial</a>
+      <a href="curso_galeria.html">Cursos</a>
+      <a href="contato.html">Contato</a>
+      <div class="nav-divider"></div>
+      <a href="login.html" class="btn-nav btn-login">Login</a>
+      <a href="cadastro.html" class="btn-nav btn-cadastro">Cadastro</a>
+      <a href="perfil.html" class="btn-nav btn-perfil">Perfil</a>
+      <a href="#" class="btn-nav btn-sair">Sair</a>
+    </div>
+  </div>
+</nav>
+
+
+{% block conteudo %}
+{% endblock %}
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>IFRN FIC</h4>
+      <p>Instituto Federal do Rio Grande do Norte – Cursos de Formação Inicial e Continuada para a comunidade.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="index.html">Inicial</a></li>
+        <li><a href="curso_galeria.html">Cursos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Conta</h4>
+      <ul>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="mailto:fic@ifrn.edu.br">fic@ifrn.edu.br</a></li>
+        <li><a href="#">(84) 3000-0000</a></li>
+        <li><a href="contato.html">Formulário de Contato</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 IFRN – Instituto Federal do Rio Grande do Norte. Todos os direitos reservados.
+  </div>
+</footer>
+
+<script src="{% static 'assets/js/nav.js' %}"></script>
+</body>
+</html>

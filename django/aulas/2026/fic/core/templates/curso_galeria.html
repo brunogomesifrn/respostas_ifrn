@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<div class="page-header">
+  <div class="page-header-inner">
+    <h1>Galeria de Cursos</h1>
+    <div class="breadcrumb">
+      <a href="index.html">Início</a><span>/</span><span>Cursos</span>
+    </div>
+  </div>
+</div>
+
+<div class="main-content">
+
+  <aside class="sidebar">
+    <h3>🔍 Filtros</h3>
+
+    <div class="filter-group">
+      <label class="group-label" for="busca">Buscar por nome</label>
+      <input type="text" id="busca" placeholder="Digite o nome do curso..." />
+    </div>
+
+    <div class="filter-group">
+      <label class="group-label">Área do Curso</label>
+      <div class="checkbox-list">
+        <label class="checkbox-item"><input type="checkbox" checked /> Informática</label>
+        <label class="checkbox-item"><input type="checkbox" checked /> Eventos</label>
+        <label class="checkbox-item"><input type="checkbox" checked /> Eletromecânica</label>
+        <label class="checkbox-item"><input type="checkbox" checked /> Mecânica</label>
+        <label class="checkbox-item"><input type="checkbox" /> Administração</label>
+        <label class="checkbox-item"><input type="checkbox" /> Saúde</label>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <label class="group-label">Público-Alvo</label>
+      <div class="checkbox-list">
+        <label class="checkbox-item"><input type="checkbox" checked /> Discente</label>
+        <label class="checkbox-item"><input type="checkbox" checked /> Docente</label>
+        <label class="checkbox-item"><input type="checkbox" checked /> Externo</label>
+        <label class="checkbox-item"><input type="checkbox" /> Servidor</label>
+      </div>
+    </div>
+
+    <button class="btn-filter">Atualizar</button>
+    <button class="btn-reset">Limpar filtros</button>
+  </aside>
+
+  <div>
+    <div class="results-bar">
+      <p class="results-count">Exibindo <strong>9</strong> de <strong>24</strong> cursos</p>
+      <select class="sort-select">
+        <option>Mais recentes</option>
+        <option>A–Z</option>
+        <option>Z–A</option>
+        <option>Carga horária (menor)</option>
+        <option>Carga horária (maior)</option>
+      </select>
+    </div>
+
+    <div class="courses-grid">
+
+      <div class="course-card">
+        <div class="course-card-img">💻</div>
+        <div class="course-card-body">
+          <span class="course-area-tag">Informática</span>
+          <h3>Introdução à Programação com Python</h3>
+        </div>
+        <div class="course-card-footer"><a href="curso_detalhe.html" class="btn-card">Ver Curso</a></div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-card-img">🎪</div>
+        <div class="course-card-body">
+          <span class="course-area-tag">Eventos</span>
+          <h3>Organização e Gestão de Eventos</h3>
+        </div>
+        <div class="course-card-footer"><a href="curso_detalhe.html" class="btn-card">Ver Curso</a></div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-card-img">⚙️</div>
+        <div class="course-card-body">
+          <span class="course-area-tag">Eletromecânica</span>
+          <h3>Manutenção de Motores Elétricos</h3>
+        </div>
+        <div class="course-card-footer"><a href="curso_detalhe.html" class="btn-card">Ver Curso</a></div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-card-img">🔩</div>
+        <div class="course-card-body">
+          <span class="course-area-tag">Mecânica</span>
+          <h3>Tornearia Mecânica Básica</h3>
+        </div>
+        <div class="course-card-footer"><a href="curso_detalhe.html" class="btn-card">Ver Curso</a></div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-card-img">🌐</div>
+        <div class="course-card-body">
+          <span class="course-area-tag">Informática</span>
+          <h3>Desenvolvimento Web com HTML e CSS</h3>
+        </div>
+        <div class="course-card-footer"><a href="curso_detalhe.html" class="btn-card">Ver Curso</a></div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-card-img">📸</div>
+        <div class="course-card-body">
+          <span class="course-area-tag">Eventos</span>
+          <h3>Fotografia para Eventos Corporativos</h3>
+        </div>
+        <div class="course-card-footer"><a href="curso_detalhe.html" class="btn-card">Ver Curso</a></div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-card-img">🤖</div>
+        <div class="course-card-body">
+          <span class="course-area-tag">Informática</span>
+          <h3>Inteligência Artificial para Iniciantes</h3>
+        </div>
+        <div class="course-card-footer"><a href="curso_detalhe.html" class="btn-card">Ver Curso</a></div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-card-img">🎉</div>
+        <div class="course-card-body">
+          <span class="course-area-tag">Eventos</span>
+          <h3>Cerimonial e Protocolo</h3>
+        </div>
+        <div class="course-card-footer"><a href="curso_detalhe.html" class="btn-card">Ver Curso</a></div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-card-img">🔌</div>
+        <div class="course-card-body">
+          <span class="course-area-tag">Eletromecânica</span>
+          <h3>Instalações Elétricas Residenciais</h3>
+        </div>
+        <div class="course-card-footer"><a href="curso_detalhe.html" class="btn-card">Ver Curso</a></div>
+      </div>
+
+    </div>
+
+    <div class="pagination">
+      <button class="page-btn disabled">‹</button>
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <span style="color:var(--text-muted); padding: 0 .25rem;">…</span>
+      <button class="page-btn">8</button>
+      <button class="page-btn">›</button>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
