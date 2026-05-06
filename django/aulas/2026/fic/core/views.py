@@ -5,3 +5,6 @@ def inicial(request):
 
 def curso_galeria(request):
     return render(request, 'curso_galeria.html')
+
+def contato(request):
+    return render(request, 'contato.html')

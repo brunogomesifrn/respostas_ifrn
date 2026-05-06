@@ -1,4 +1,17 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+Galeria de Cursos
+{% endblock %}
+
+{% block estilo %}
+<link rel="stylesheet" href="{% static 'assets/css/curso_galeria.css' %}" />
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'assets/js/curso_galeria.js' %}"></script>
+{% endblock %}
 
 {% block conteudo %}
 <div class="page-header">

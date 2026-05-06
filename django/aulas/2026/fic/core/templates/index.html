@@ -1,4 +1,13 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+Página inicial
+{% endblock %}
+
+{% block estilo %}
+<link rel="stylesheet" href="{% static 'assets/css/index.css' %}" />
+{% endblock %}
 
 {% block conteudo %}
 <section class="hero">

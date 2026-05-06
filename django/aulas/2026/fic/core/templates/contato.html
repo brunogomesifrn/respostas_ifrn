@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+Contato
+{% endblock %}
+
+{% block estilo %}
+<link rel="stylesheet" href="{% static 'assets/css/contato.css' %}" />
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'assets/js/contato.js' %}"></script>
+{% endblock %}
+
+{% block conteudo %}
+<div class="page-header">
+  <div class="page-header-inner">
+    <h1>Contato</h1>
+    <div class="breadcrumb">
+      <a href="index.html">Início</a><span>/</span><span>Contato</span>
+    </div>
+  </div>
+</div>
+
+<div class="main-content">
+
+  <div class="info-col">
+    <div class="info-card">
+      <div class="info-icon">📍</div>
+      <div class="info-body">
+        <h3>Endereço</h3>
+        <p>Campus Natal – Central<br />Rua Dr. Nilo Bezerra Ramalho, 1692<br />Tirol, Natal/RN – CEP 59015-300</p>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">📞</div>
+      <div class="info-body">
+        <h3>Telefone</h3>
+        <p><a href="tel:+558432151200">(84) 3215-1200</a><br />Seg–Sex: 8h às 17h</p>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">✉️</div>
+      <div class="info-body">
+        <h3>E-mail</h3>
+        <p><a href="mailto:fic@ifrn.edu.br">fic@ifrn.edu.br</a><br />Respondemos em até 2 dias úteis.</p>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">🌐</div>
+      <div class="info-body">
+        <h3>Site Institucional</h3>
+        <p><a href="#">www.ifrn.edu.br</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-card">
+    <h2>Envie uma Mensagem</h2>
+    <p>Preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
+
+    <form id="contact-form" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nome">Nome completo *</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail *</label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="celular">Celular</label>
+        <input type="tel" id="celular" name="celular" placeholder="(84) 99999-9999" />
+        <span class="hint">Formato: (DD) 99999-9999</span>
+      </div>
+
+      <div class="form-group">
+        <label for="assunto">Assunto</label>
+        <select id="assunto" name="assunto">
+          <option value="">Selecione um assunto</option>
+          <option>Informações sobre cursos</option>
+          <option>Inscrições</option>
+          <option>Certificados</option>
+          <option>Parcerias</option>
+          <option>Outros</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="mensagem">Mensagem *</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Enviar Mensagem →</button>
+
+      <div class="success-msg" id="success-msg">
+        ✅ Mensagem enviada com sucesso! Entraremos em contato em breve.
+      </div>
+    </form>
+  </div>
+
+</div>
+{% endblock %}
