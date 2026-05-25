@@ -1,0 +1,76 @@
+/* index.html – hero + courses grid */
+
+footer { margin-top: 0; }
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, #009944 100%);
+  color: var(--white); padding: 5rem 1.25rem;
+  text-align: center; position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-inner { max-width: 700px; margin: 0 auto; position: relative; }
+.hero-badge {
+  display: inline-block; background: var(--accent); color: var(--primary-dark);
+  font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;
+  padding: .25rem .75rem; border-radius: 20px; margin-bottom: 1rem;
+}
+.hero h1 { font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+.hero p { font-size: 1.1rem; opacity: .9; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+.hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.btn-hero-primary {
+  background: var(--accent); color: var(--primary-dark);
+  padding: .8rem 2rem; border-radius: var(--radius); font-weight: 700; font-size: 1rem;
+  transition: background .2s, transform .2s;
+}
+.btn-hero-primary:hover { background: var(--accent-dark); transform: translateY(-2px); }
+.btn-hero-outline {
+  background: transparent; color: var(--white);
+  border: 2px solid rgba(255,255,255,.6);
+  padding: .8rem 2rem; border-radius: var(--radius); font-weight: 600; font-size: 1rem;
+  transition: all .2s;
+}
+.btn-hero-outline:hover { background: rgba(255,255,255,.1); border-color: var(--white); }
+
+/* ── SECTIONS ── */
+section { padding: 4rem 1.25rem; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 2.5rem; }
+.section-header h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: .5rem; }
+.section-header p { color: var(--text-muted); font-size: 1rem; }
+.section-header .line { width: 48px; height: 4px; background: var(--primary); border-radius: 2px; margin: .75rem auto 0; }
+
+/* ── COURSES GRID ── */
+.courses-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+.course-card {
+  background: var(--white); border-radius: var(--radius);
+  box-shadow: var(--shadow); overflow: hidden;
+  transition: transform .25s, box-shadow .25s; display: flex; flex-direction: column;
+}
+.course-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.course-card-img {
+  height: 170px; background: linear-gradient(135deg, var(--primary) 0%, #009944 100%);
+  display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white; overflow: hidden;
+}
+.course-card-img img { width: 100%; height: 100%; object-fit: cover; }
+.course-card-body { padding: 1.1rem 1.25rem; flex: 1; display: flex; flex-direction: column; gap: .4rem; }
+.course-area { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--primary); font-weight: 600; }
+.course-card-body h3 { font-size: 1rem; font-weight: 700; line-height: 1.35; }
+.course-card-body p { font-size: .85rem; color: var(--text-muted); flex: 1; }
+.course-meta { display: flex; gap: 1rem; font-size: .78rem; color: var(--text-muted); }
+.course-card-footer { padding: .9rem 1.25rem; border-top: 1px solid var(--border); }
+.btn-card {
+  display: block; text-align: center; background: var(--primary); color: var(--white);
+  padding: .55rem 1rem; border-radius: var(--radius); font-size: .85rem; font-weight: 600; transition: background .2s;
+}
+.btn-card:hover { background: var(--primary-dark); }
+
+.courses-more { text-align: center; margin-top: 2rem; }
+.btn-outline {
+  display: inline-block; border: 2px solid var(--primary); color: var(--primary);
+  padding: .65rem 1.75rem; border-radius: var(--radius); font-weight: 600; transition: all .2s;
+}
+.btn-outline:hover { background: var(--primary); color: var(--white); }

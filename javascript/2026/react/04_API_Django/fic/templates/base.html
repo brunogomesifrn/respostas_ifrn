@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IFRN FIC – {% block titulo %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'assets/css/base.css' %}" />
+  {% block estilo %}
+  {% endblock %}
+</head>
+<body>
+
+{% include 'menu.html' %}
+
+{% block conteudo %}
+{% endblock %}
+
+{% include 'rodape.html' %}
+
+<script src="{% static 'assets/js/nav.js' %}"></script>
+{% block scripts %}
+{% endblock %}
+</body>
+</html>
