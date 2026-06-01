@@ -1,0 +1,214 @@
+{% extends 'privado/base.html' %}
+
+{% block conteudo %}
+<main class="main">
+
+  <div>
+    <h1 class="page-title">Dashboard</h1>
+    <p class="page-subtitle">Bem-vindo de volta, Bruno. Confira o resumo abaixo.</p>
+  </div>
+
+  <div class="section-card">
+    <div class="section-card-header">
+      <h2>Gerenciamento de Áreas</h2>
+      <button class="btn-sm btn-primary">＋ Cadastrar Curso</button>
+    </div>
+    <div class="section-card-body">
+      <div class="table-toolbar">
+        <input type="text" class="search-input" placeholder="🔍  Buscar curso..." />
+        <select class="filter-select">
+          <option>Todas as áreas</option>
+          <option>Informática</option>
+          <option>Eventos</option>
+          <option>Eletromecânica</option>
+          <option>Mecânica</option>
+        </select>
+        <select class="filter-select">
+          <option>Todos os públicos</option>
+          <option>Discente</option>
+          <option>Docente</option>
+          <option>Externo</option>
+        </select>
+        <button class="btn-sm btn-outline-sm">Filtrar</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <!--<th>Foto</th>-->
+              <th>Nome do Curso</th>
+              <!--<th>Área</th>-->
+              <!--<th>Público</th>-->
+              <!--<th>Carga Horária</th>-->
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for area in areas %}
+            <tr>
+              <!-- <td><div class="td-img">💻</div></td> -->
+              <td><div class="td-name">{{area.nome}}</div></td>
+              <!-- <td><span class="badge badge-info">Informática</span></td> -->
+              <!-- <td>Discente / Externo</td> -->
+              <!-- <td>60h</td> -->
+              <td><div class="td-actions"><button class="btn-sm btn-outline-sm">✏ Editar</button><button class="btn-sm btn-danger-sm">🗑 Remover</button></div></td>
+            </tr>
+            {% endfor %}
+            
+          </tbody>
+        </table>
+      </div>
+      <div class="pagination">
+        <button class="page-btn">‹</button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <span style="color:var(--text-muted);padding:0 .2rem">…</span>
+        <button class="page-btn">5</button>
+        <button class="page-btn">›</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-card-header">
+      <h2>Cadastrar / Editar Curso</h2>
+      <span style="font-size:.8rem;color:var(--text-muted)">* campos obrigatórios</span>
+    </div>
+    <div class="section-card-body">
+      <form id="course-form" novalidate>
+        <div class="form-section">
+
+          <div class="form-group">
+            <label>Título do Curso <span class="required">*</span></label>
+            <input type="text" placeholder="Ex: Introdução à Programação com Python" required />
+          </div>
+
+          <div class="form-group">
+            <label>Área <span class="required">*</span></label>
+            <select required>
+              <option value="">Selecione a área</option>
+              <option>Informática</option>
+              <option>Eventos</option>
+              <option>Eletromecânica</option>
+              <option>Mecânica</option>
+              <option>Administração</option>
+              <option>Saúde</option>
+            </select>
+          </div>
+
+          <div class="form-group full">
+            <label>Resumo / Descrição <span class="required">*</span></label>
+            <textarea placeholder="Descreva o curso, objetivos, conteúdo programático..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Carga Horária (horas) <span class="required">*</span></label>
+            <input type="number" placeholder="Ex: 60" min="1" required />
+          </div>
+
+          <div class="form-group">
+            <label>Data de Início <span class="required">*</span></label>
+            <input type="date" required />
+          </div>
+
+          <div class="form-group">
+            <label>Data de Término</label>
+            <input type="date" />
+          </div>
+
+          <div class="form-group">
+            <label>Horário de início</label>
+            <input type="time" />
+          </div>
+
+          <div class="form-group">
+            <label>E-mail de contato</label>
+            <input type="email" placeholder="coordenacao@ifrn.edu.br" />
+          </div>
+
+          <div class="form-group full">
+            <label>Link de Inscrições</label>
+            <input type="url" placeholder="https://..." />
+            <span class="hint">URL completa, incluindo https://</span>
+          </div>
+
+          <div class="form-group full">
+            <label>Local de realização</label>
+            <input type="text" placeholder="Ex: Campus Natal – Central, Bloco B" />
+          </div>
+
+          <div class="form-group full">
+            <label>Modalidade <span class="required">*</span></label>
+            <div class="radio-group">
+              <label class="radio-item"><input type="radio" name="modalidade" value="presencial" checked /> Presencial</label>
+              <label class="radio-item"><input type="radio" name="modalidade" value="ead" /> EaD</label>
+              <label class="radio-item"><input type="radio" name="modalidade" value="hibrido" /> Híbrido</label>
+            </div>
+          </div>
+
+          <div class="form-group full">
+            <label>Público-Alvo <span class="required">*</span></label>
+            <div class="check-group">
+              <label class="check-item"><input type="checkbox" value="discente" checked /> Discente</label>
+              <label class="check-item"><input type="checkbox" value="docente" /> Docente</label>
+              <label class="check-item"><input type="checkbox" value="externo" /> Externo</label>
+              <label class="check-item"><input type="checkbox" value="servidor" /> Servidor</label>
+              <label class="check-item"><input type="checkbox" value="egresso" /> Egresso</label>
+            </div>
+          </div>
+
+          <div class="form-group full">
+            <label>Número máximo de vagas</label>
+            <div class="range-row">
+              <input type="range" id="vagas" min="5" max="100" step="5" value="30" oninput="document.getElementById('vagas-val').textContent=this.value" />
+              <span class="range-value" id="vagas-val">30</span>
+            </div>
+            <span class="hint">Arraste para definir o limite de vagas (5–100)</span>
+          </div>
+
+          <div class="form-group full">
+            <label>Imagem do Curso</label>
+            <div class="file-drop" onclick="document.getElementById('img-upload').click()">
+              <input type="file" id="img-upload" accept="image/*" />
+              <label>
+                <span class="file-icon">🖼</span>
+                <span class="file-text">Arraste uma imagem ou <span class="file-link">clique para selecionar</span></span>
+                <span class="hint">PNG, JPG ou WEBP – máx. 2 MB</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Cor de destaque do card</label>
+            <div style="display:flex;align-items:center;gap:.75rem;">
+              <input type="color" value="#006633" id="cor-destaque" />
+              <span class="hint">Usada como cor de fundo do card quando não há imagem</span>
+            </div>
+          </div>
+
+          <div class="form-group" style="justify-content:flex-end;padding-top:1.5rem;">
+            <div class="toggle-row">
+              <label class="toggle"><input type="checkbox" checked /><span class="toggle-slider"></span></label>
+              <span class="toggle-label">Publicar curso imediatamente</span>
+            </div>
+            <div class="toggle-row" style="margin-top:.75rem;">
+              <label class="toggle"><input type="checkbox" /><span class="toggle-slider"></span></label>
+              <span class="toggle-label">Permitir inscrições externas</span>
+            </div>
+          </div>
+
+          <div class="form-group full">
+            <div class="form-actions">
+              <button type="submit" class="btn-form-primary">💾 Salvar Curso</button>
+              <button type="reset" class="btn-form-secondary">Cancelar</button>
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+</main>
+{% endblock %}

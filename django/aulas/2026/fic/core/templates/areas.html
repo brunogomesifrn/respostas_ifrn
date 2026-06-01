@@ -7,8 +7,13 @@
 </head>
 <body>
     <h1>Áreas</h1>
+    <p><a href="{% url 'area_cadastrar' %}">Cadastar</a></p>
     {% for area in areas %}
-    <p>{{area.id}} - {{area.nome}}</p>
+    <p>
+        {{area.id}} - {{area.nome}}
+        <a href="{% url 'area_editar' area.id %}">EDITAR</a>
+        <a href="{% url 'area_remover' area.id %}">REMOVER</a>
+    </p>
     {% endfor %}
 </body>
 </html>

@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard – IFRN FIC</title>
+  <link rel="stylesheet" href="{% static 'assets/css/perfil.css' %}" />
+</head>
+<body>
+
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="avatar">BG</div>
+    <div>
+      <div class="user-name">Bruno Gomes</div>
+      <div class="user-role">Administrador</div>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-section">Principal</div>
+    <a href="#" class="nav-item active"><span class="nav-icon">🏠</span> Inicial</a>
+    <a href="#" class="nav-item"><span class="nav-icon">👤</span> Meus Dados</a>
+    <a href="#" class="nav-item"><span class="nav-icon">📚</span> Meus Cursos</a>
+
+    <div class="nav-section">Gerenciamento</div>
+    <a href="#" class="nav-item"><span class="nav-icon">🎓</span> Cursos</a>
+    <a href="#" class="nav-item"><span class="nav-icon">🏷</span> Áreas</a>
+    <a href="#" class="nav-item"><span class="nav-icon">👥</span> Públicos-Alvo</a>
+    <a href="#" class="nav-item"><span class="nav-icon">🔑</span> Usuários</a>
+
+    <div class="nav-section">Sessão</div>
+    <a href="index.html" class="nav-item danger"><span class="nav-icon">🚪</span> Sair</a>
+  </nav>
+
+  <div class="sidebar-footer">IFRN FIC © 2025</div>
+</aside>
+
+<div class="topbar">
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="logo-text">IFRN FIC<span>Dashboard</span></div>
+  <div class="avatar" style="width:36px;height:36px;font-size:1rem;">BG</div>
+</div>
+
+{% block conteudo %}
+{% endblock %}
+
+
+
+<script src="{% static 'assets/js/perfil.js' %}"></script>
+</body>
+</html>
