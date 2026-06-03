@@ -23,11 +23,13 @@ document.querySelectorAll('.page-btn:not(.disabled)').forEach(btn => {
   });
 });
 
+/*
 document.getElementById('course-form').addEventListener('submit', (e) => {
   e.preventDefault();
   alert('Curso salvo com sucesso!');
 });
-
+*/
+/*
 document.querySelectorAll('.btn-danger-sm').forEach(btn => {
   btn.addEventListener('click', () => {
     if (confirm('Deseja remover este curso?')) {
@@ -36,3 +38,4 @@ document.querySelectorAll('.btn-danger-sm').forEach(btn => {
     }
   });
 });
+*/

@@ -27,7 +27,8 @@ def area_cadastrar(request):
     context = {
         'form': form
     }
-    return render(request, 'area_cadastrar.html', context)
+    #return render(request, 'area_cadastrar.html', context)
+    return render(request, 'privado/area_cadastrar.html', context)
 
 def area_editar(request, id):
     area = Area.objects.get(pk=id)
@@ -38,7 +39,8 @@ def area_editar(request, id):
     context = {
         'form': form
     }
-    return render(request, 'area_cadastrar.html', context)
+    #return render(request, 'area_cadastrar.html', context)
+    return render(request, 'privado/area_cadastrar.html', context)
 
 def area_remover(request, id):
     area = Area.objects.get(pk=id)

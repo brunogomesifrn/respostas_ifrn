@@ -11,7 +11,9 @@
   <div class="section-card">
     <div class="section-card-header">
       <h2>Gerenciamento de Áreas</h2>
+      <a href="{% url 'area_cadastrar' %}">
       <button class="btn-sm btn-primary">＋ Cadastrar Curso</button>
+      </a>
     </div>
     <div class="section-card-body">
       <div class="table-toolbar">
@@ -51,7 +53,14 @@
               <!-- <td><span class="badge badge-info">Informática</span></td> -->
               <!-- <td>Discente / Externo</td> -->
               <!-- <td>60h</td> -->
-              <td><div class="td-actions"><button class="btn-sm btn-outline-sm">✏ Editar</button><button class="btn-sm btn-danger-sm">🗑 Remover</button></div></td>
+              <td><div class="td-actions">
+                <a href="{% url 'area_editar' area.id %}">
+                <button class="btn-sm btn-outline-sm">✏ Editar</button>
+                </a>
+                <a href="{% url 'area_remover' area.id %}">
+                <button class="btn-sm btn-danger-sm">🗑 Remover</button>
+                </a>
+              </div></td>
             </tr>
             {% endfor %}
             
