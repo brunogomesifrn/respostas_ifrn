@@ -8,6 +8,7 @@ import Publicos from "./src/screens/Publicos";
 import Login from "./src/screens/Login";
 import Cadastro from "./src/screens/Cadastro";
 import Perfil from "./src/screens/Perfil";
+import CursosPaginacao from "./src/screens/CursosPaginacao";
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +23,8 @@ export default function App() {
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Cadastro" component={Cadastro} />
       <Stack.Screen name="Perfil" component={Perfil} />
+      <Stack.Screen name="CursosPaginacao" component={CursosPaginacao} />
+      
     </Stack.Navigator>
   </NavigationContainer>
   );

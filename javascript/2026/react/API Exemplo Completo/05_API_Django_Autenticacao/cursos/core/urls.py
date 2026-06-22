@@ -22,4 +22,6 @@ urlpatterns = [
    path('cursos/editar/<int:id>/', CursoEditarAPI, name="CursoEditarAPI"),
    path('cursos/remover/<int:id>/', CursoRemoverAPI, name="CursoRemoverAPI"),
 
+   path('cursos/listar/pag/', CursosListarPaginatorAPI, name='CursosListarPaginatorAPI'),
+
 ]

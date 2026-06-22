@@ -79,14 +79,14 @@ def UsuarioCadastrarAPI(request):
 
 
 @api_view(['GET'])
-@permission_classes([IsAuthenticated])
+#@permission_classes([IsAuthenticated])
 def AreasListarAPI(request):
     lista_areas = Areas.objects.all()
     serializer = AreaSerializer(lista_areas, many=True)
     return Response(serializer.data)
 
 @api_view(['POST'])
-@permission_classes([IsAuthenticated])
+#@permission_classes([IsAuthenticated])
 def AreaInserirAPI(request):
     serializer = AreaSerializer(data=request.data)
     if serializer.is_valid():
@@ -97,7 +97,7 @@ def AreaInserirAPI(request):
                     status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['PUT'])
-@permission_classes([IsAuthenticated])
+#@permission_classes([IsAuthenticated])
 def AreaEditarAPI(request, id):
     #area = Areas.objects.get(pk=id)
     area = get_object_or_404(Areas, pk=id)
@@ -110,7 +110,7 @@ def AreaEditarAPI(request, id):
                     status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['DELETE'])
-@permission_classes([IsAuthenticated])
+#@permission_classes([IsAuthenticated])
 def AreaRemoverAPI(request, id):
     area = get_object_or_404(Areas, pk=id)
     area.delete()
@@ -122,14 +122,14 @@ def AreaRemoverAPI(request, id):
 
 
 @api_view(['GET'])
-@permission_classes([IsAuthenticated])
+#@permission_classes([IsAuthenticated])
 def PublicosListarAPI(request):
     lista_publicos = Publicos.objects.all()
     serializer = PublicoSerializer(lista_publicos, many=True)
     return Response(serializer.data)
 
 @api_view(['POST'])
-@permission_classes([IsAuthenticated])
+#@permission_classes([IsAuthenticated])
 def PublicoInserirAPI(request):
     serializer = PublicoSerializer(data=request.data)
     if serializer.is_valid():
@@ -140,7 +140,7 @@ def PublicoInserirAPI(request):
                     status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['PUT'])
-@permission_classes([IsAuthenticated])
+#@permission_classes([IsAuthenticated])
 def PublicoEditarAPI(request, id):
     publico = get_object_or_404(Publicos, pk=id)
     serializer = PublicoSerializer(data=request.data, instance=publico)
@@ -152,7 +152,7 @@ def PublicoEditarAPI(request, id):
                     status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['DELETE'])
-@permission_classes([IsAuthenticated])
+#@permission_classes([IsAuthenticated])
 def PublicoRemoverAPI(request, id):
     publico = get_object_or_404(Publicos, pk=id)
     publico.delete()
@@ -165,14 +165,14 @@ def PublicoRemoverAPI(request, id):
 
 
 @api_view(['GET'])
-@permission_classes([IsAuthenticated])
+#@permission_classes([IsAuthenticated])
 def CursosListarAPI(request):
     lista_cursos = Cursos.objects.all()
     serializer = CursoSerializer(lista_cursos, many=True)
     return Response(serializer.data)
 
 @api_view(['POST'])
-@permission_classes([IsAuthenticated])
+#@permission_classes([IsAuthenticated])
 def CursoInserirAPI(request):
     serializer = CursoSerializer(data=request.data)
     if serializer.is_valid():
@@ -183,7 +183,7 @@ def CursoInserirAPI(request):
                     status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['PUT'])
-@permission_classes([IsAuthenticated])
+#@permission_classes([IsAuthenticated])
 def CursoEditarAPI(request, id):
     curso = get_object_or_404(Cursos, pk=id)
     serializer = CursoSerializer(data=request.data, instance=curso)
@@ -195,10 +195,38 @@ def CursoEditarAPI(request, id):
                     status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['DELETE'])
-@permission_classes([IsAuthenticated])
+#@permission_classes([IsAuthenticated])
 def CursoRemoverAPI(request, id):
     curso = get_object_or_404(Cursos, pk=id)
     curso.delete()
     return Response(
         status=status.HTTP_204_NO_CONTENT
     )
+
+# Lista de Cursos com Paginação
+from django.core.paginator import Paginator
+@api_view(['GET'])
+def CursosListarPaginatorAPI(request):
+
+    pagina = int(request.GET.get('page', 1))
+    tamanho = int(request.GET.get('page_size', 10))
+
+    cursos = Cursos.objects.all().order_by('id')
+
+    paginator = Paginator(cursos, tamanho)
+
+    pagina_obj = paginator.get_page(pagina)
+
+    serializer = CursoSerializer(
+        pagina_obj.object_list,
+        many=True
+    )
+
+    return Response({
+        'count': paginator.count,
+        'total_pages': paginator.num_pages,
+        'current_page': pagina,
+        'next_page': pagina + 1 if pagina_obj.has_next() else None,
+        'previous_page': pagina - 1 if pagina_obj.has_previous() else None,
+        'results': serializer.data
+    })

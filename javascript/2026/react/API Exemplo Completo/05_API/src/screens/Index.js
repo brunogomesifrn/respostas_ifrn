@@ -28,6 +28,13 @@ export default function Index({navigation}){
             title="Perfil"
             onPress={()=>navigation.navigate('Perfil')}
             />
+
+            <Button 
+            title="CursosPaginacao"
+            onPress={()=>navigation.navigate('CursosPaginacao')}
+            />
+
+            
                 
             
 
