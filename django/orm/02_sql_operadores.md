@@ -1,3 +1,5 @@
+# Material do Prof. Bruno Gomes - IFRN Campus Canguaretama
+
 # SQL × Django ORM — operadores de comparação, lógicos e de caracteres
 
 Continuação de `01_sql_basico_operacoes.md`. Lá o `WHERE` só apareceu com o

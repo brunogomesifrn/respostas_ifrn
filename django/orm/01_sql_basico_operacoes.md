@@ -1,3 +1,5 @@
+# Material do Prof. Bruno Gomes - IFRN Campus Canguaretama
+
 # SQL básico × Django ORM — `FROM`, `WHERE` e `ORDER BY`
 
 Documento de apoio da aula. Cada bloco mostra **o SQL** e, logo abaixo, **o
