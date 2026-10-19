@@ -86,7 +86,7 @@ urlpatterns = [
     path('', include('apps.core.urls')),
     path('cursos/', include('apps.cursos.urls')),
     path('usuarios/', include('apps.usuarios.urls')),
-    path('api/', include('apps.api.urls')),
+    path('api/v1/', include('apps.api.urls')),
     path('api-auth/', include('rest_framework.urls')),
 ]
 ```
