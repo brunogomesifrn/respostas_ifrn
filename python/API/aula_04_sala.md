@@ -27,7 +27,7 @@ Crie um arquivo `teste_aberta.py` (fora da pasta do projeto ou na raiz, tanto fa
 ```python
 import requests
 
-URL = 'http://127.0.0.1:8000/api/'
+URL = 'http://127.0.0.1:8000/api/v1/'
 
 r = requests.post(URL + 'areas/', json={'nome': 'Qualquer coisa'})
 print(r.status_code)
@@ -91,7 +91,7 @@ urlpatterns = [
 
 Agora faça o teste no navegador:
 
-1. Abra `http://127.0.0.1:8000/api/areas/`.
+1. Abra `http://127.0.0.1:8000/api/v1/areas/`.
 2. Clique em **Log in** no canto superior direito e entre com um usuário já cadastrado no site.
 3. Cadastre uma área pela caixa *Content* (botão **POST**).
 4. Clique em **Log out** e tente cadastrar de novo. O que aconteceu?
@@ -171,7 +171,7 @@ Abra `apps/api/urls.py` e acrescente no final da lista:
     path('logout/', sair, name='api_logout'),
 ```
 
-Abra `http://127.0.0.1:8000/api/login/` no navegador e faça um `POST` com:
+Abra `http://127.0.0.1:8000/api/v1/login/` no navegador e faça um `POST` com:
 
 ```json
 {"username": "seu_usuario", "password": "sua_senha"}
@@ -361,7 +361,7 @@ Deixe o `UsuarioSerializer`: ele vai ser usado na próxima aula.
 Rode o `check` e depois o `teste_aberta.py` de novo. Compare o `status_code` com o da
 Parte 1. Mudou de `403` para `401`?
 
-Teste também na Browsable API: abra `http://127.0.0.1:8000/api/token/` e faça um `POST`
+Teste também na Browsable API: abra `http://127.0.0.1:8000/api/v1/token/` e faça um `POST`
 com seu usuário e senha. Copie o `access` e cole em https://jwt.io para ver o conteúdo do token.
 Procure o campo `user_id`: o que aparece nele?
 

@@ -160,7 +160,7 @@ Abra `apps/api/urls.py` e acrescente no final da lista:
     path('cadastro/', cadastro, name='api_cadastro'),
 ```
 
-Rode o `check`. Abra `http://127.0.0.1:8000/api/cadastro/` no navegador e cadastre um usuário:
+Rode o `check`. Abra `http://127.0.0.1:8000/api/v1/cadastro/` no navegador e cadastre um usuário:
 
 ```json
 {
@@ -227,7 +227,7 @@ Repare:
 ## Passo 9: Testar o `eu` na Browsable API
 
 1. Faça login pelo site ou pelo `api-auth/` (a sessão continua funcionando na Browsable API).
-2. Abra `http://127.0.0.1:8000/api/eu/`. Aparecem os seus dados?
+2. Abra `http://127.0.0.1:8000/api/v1/eu/`. Aparecem os seus dados?
 3. Mude o `first_name` e faça um **PUT**.
 4. Tente mudar o `cpf`. O que aconteceu?
 5. Faça logout e abra `api/eu/` de novo. Qual o `status_code`?
