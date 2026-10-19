@@ -93,7 +93,7 @@ urlpatterns = [
 
 Agora faça o teste no navegador:
 
-1. Abra `http://127.0.0.1:8000/api/v1/areas/`.
+1. Abra `http://127.0.0.1:8000/api/v1/area_cadastrar/`.
 2. Clique em **Log in** no canto superior direito e entre com um usuário já cadastrado no site.
 3. Cadastre uma área pela caixa *Content* (botão **POST**).
 4. Clique em **Log out** e tente cadastrar de novo. O que aconteceu?
