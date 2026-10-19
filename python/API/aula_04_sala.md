@@ -29,9 +29,11 @@ import requests
 
 URL = 'http://127.0.0.1:8000/api/v1/'
 
-r = requests.post(URL + 'areas/', json={'nome': 'Qualquer coisa'})
+r = requests.get(URL + 'areas/')
+print(r.json())
+
+r = requests.post(URL + 'area_cadastrar/', json={'nome': 'Eventos'})
 print(r.status_code)
-requests.delete(URL + f"areas/{r.json()['id']}/")
 ```
 
 Anote o `status_code` que apareceu. Se foi `201`, qualquer pessoa consegue cadastrar.
